@@ -19,6 +19,8 @@
 <body>
 
 
+@include('Layout.menu')
+
 @yield('content')
 
 
