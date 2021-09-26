@@ -20,6 +20,6 @@ class HomeController extends Controller
 
 
 
-        return view('Home');
+        return view('Home',['ServiceData'=>$ServiceData]);
     }
 }

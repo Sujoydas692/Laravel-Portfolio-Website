@@ -8,8 +8,12 @@ use App\Models\VisitorModel;
 class VisitorController extends Controller
 {
     function visitorIndex(){
+        return view('Visitor');
+    }
 
-       $visitorData = json_decode(VisitorModel::orderBy('id','desc')->take(500)->get());
-        return view('Visitor',['visitorData'=>$visitorData]);
+    function getVisitorData(){
+        $result = json_encode(VisitorModel::all());
+
+        return $result;
     }
 }
