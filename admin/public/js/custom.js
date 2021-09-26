@@ -149,21 +149,36 @@ function ServiceUpdateDetails(detailsID) {
 }
 
 function ServiceUpdate(serviceID,serviceName,serviceDes,serviceImg) {
-    axios.post('/ServiceUpdate', {
-        id: serviceID,
-        service_name: serviceName,
-        service_des: serviceDes,
-        service_img: serviceImg,
-    })
-        .then(function(response) {
-            if (response.status==200){
 
-            }
-            else {
-
-            }
+    if(serviceName.length==0){
+        toastr.error('Service Name is Empty !');
+    }
+    else if(serviceDes.length==0){
+        toastr.error('Service Description is Empty !');
+    }
+    else if(serviceImg.length==0){
+        toastr.error('Service Image is Empty !');
+    }
+    else {
+        axios.post('/ServiceUpdate', {
+            id: serviceID,
+            service_name: serviceName,
+            service_des: serviceDes,
+            service_img: serviceImg,
         })
-        .catch(function(error) {
+            .then(function(response) {
+                if (response.data == 1) {
+                    $('#editModal').modal('hide');
+                    toastr.success('Update Successful!');
+                    getServicesData();
+                } else {
+                    $('#editModal').modal('hide');
+                    toastr.error('Update Fail!');
+                    getServicesData();
+                }
+            })
+            .catch(function(error) {
 
-        });
+            });
+    }
 }

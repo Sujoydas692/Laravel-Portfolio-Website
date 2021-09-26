@@ -52,7 +52,12 @@
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-body p-3 text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
                     <h5 class="mt-4">Do you want to delete?</h5>
                     <h5 id="serviceDeleteId" class="mt-4"></h5>
                 </div>
@@ -69,7 +74,12 @@
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-body p-5 text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
                     <h5 id="serviceEditId" class="mt-4"></h5>
                     <div id="ServiceEditForm" class="d-none w-100">
                         <input type="text" id="ServiceNameID" class="form-control mb-4" placeholder="Service Name">
