@@ -17,3 +17,4 @@ Route::get("/getServicesData", [ServicesController::class, 'getServiceData']);
 Route::post("/ServiceDelete", [ServicesController::class, 'serviceDelete']);
 Route::post("/ServiceDetails", [ServicesController::class, 'getServiceDetails']);
 Route::post("/ServiceUpdate", [ServicesController::class, 'serviceUpdate']);
+Route::post("/ServiceAdd", [ServicesController::class, 'serviceAdd']);

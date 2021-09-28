@@ -5,7 +5,7 @@
     <div id="mainDiv" class="container d-none">
         <div class="row">
             <div class="col-md-12 p-5">
-                <table id="visitor_table" class="table table-striped table-sm table-bordered" cellspacing="0" width="100%">
+                <table id="VisitorDt" class="table table-striped table-sm table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
                         <th class="th-sm">NO</th>
@@ -46,10 +46,45 @@
 
 @endsection
 
-@section('script2')
+@section('script')
 
     <script type="text/javascript">
         getVisitorData();
+
+        //For Visitor Table
+        function getVisitorData() {
+            axios.get('/getVisitorData')
+                .then(function(response) {
+
+                    if (response.status == 200) {
+
+                        //Visitor Page Table
+                        $(document).ready(function() {
+                            $('#VisitorDt').DataTable();
+                            $('.dataTables_length').addClass('bs-select');
+                        });
+
+                        $('#mainDiv').removeClass('d-none');
+                        $('#loaderDiv').addClass('d-none');
+
+                        var dataJSON = response.data;
+                        $.each(dataJSON, function(i, item) {
+                            $('<tr>').html(
+                                "<td>" + dataJSON[i].id + "</td>" +
+                                "<td>" + dataJSON[i].ip_address + "</td>" +
+                                "<td>" + dataJSON[i].visiting_time + "</td>"
+                            ).appendTo('#visitor_table');
+                        });
+                    } else {
+                        $('#loaderDiv').addClass('d-none');
+                        $('#WrongDiv').removeClass('d-none');
+                    }
+
+                }).catch(function(error) {
+                $('#loaderDiv').addClass('d-none');
+                $('#WrongDiv').removeClass('d-none');
+            });
+        }
     </script>
 
 
