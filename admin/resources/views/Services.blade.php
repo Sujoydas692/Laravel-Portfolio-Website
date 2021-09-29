@@ -5,7 +5,7 @@
     <div id="mainDiv" class="container d-none">
         <div class="row">
             <div class="col-md-12 p-5">
-                <button id="addNewBtnID" class="btn my-3 btn-sm btn-danger">Add New</button>
+                <button id="addNewBtnID" class="btn my-3 btn-sm btn-danger"><i class="fas fa-plus"></i>  Add New</button>
                 <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
