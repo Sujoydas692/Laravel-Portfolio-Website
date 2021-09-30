@@ -2,6 +2,7 @@
 
 @section('content')
 
+    {{--Service Main Div--}}
     <div id="mainDiv" class="container d-none">
         <div class="row">
             <div class="col-md-12 p-5">
@@ -29,6 +30,7 @@
         </div>
     </div>
 
+    {{--Service Loader Div--}}
     <div id="loaderDiv" class="container">
         <div class="row">
             <div class="col-md-12 text-center p-5">
@@ -38,6 +40,7 @@
         </div>
     </div>
 
+    {{--Service Wrong Div--}}
     <div id="WrongDiv" class="container d-none">
         <div class="row">
             <div class="col-md-12 text-center p-5">
@@ -48,7 +51,7 @@
         </div>
     </div>
 
-
+     {{--Delete Service Modal--}}
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -70,7 +73,7 @@
         </div>
     </div>
 
-
+    {{--Edit Service Modal--}}
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -100,6 +103,7 @@
         </div>
     </div>
 
+    {{--Add Service Modal--}}
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">

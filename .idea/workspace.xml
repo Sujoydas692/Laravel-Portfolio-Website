@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="371533e1-8078-43a3-8037-ee94222b4ad9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/resources/views/Courses.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/public/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/public/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/views/Courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resources/views/Courses.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/resources/views/Services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/resources/views/Services.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,13 +24,14 @@
     <session id="-262674866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,32 +41,32 @@
           <entry key="gif" value="1" />
           <entry key="html" value="15" />
           <entry key="js" value="4" />
-          <entry key="php" value="70" />
+          <entry key="php" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="32" />
+          <entry key="Blade" value="33" />
           <entry key="CSS" value="1" />
           <entry key="HTML" value="15" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="4" />
-          <entry key="PHP" value="38" />
+          <entry key="PHP" value="41" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="5" />
-          <entry key="js" value="1555" />
-          <entry key="php" value="2611" />
+          <entry key="js" value="1822" />
+          <entry key="php" value="2926" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1518" />
+          <entry key="Blade" value="1833" />
           <entry key="CSS" value="5" />
-          <entry key="JavaScript" value="1555" />
+          <entry key="JavaScript" value="1822" />
           <entry key="PHP" value="1093" />
         </counts>
       </usages-collector>
@@ -77,17 +77,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/resources/views/Courses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="-16">
+              <caret line="133" column="18" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/public/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
+            <state relative-caret-position="-1475">
+              <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!block;n#CourseAdd#0" />
+                <element signature="e#3744#4168#0" />
+                <element signature="n#!!block;n#CourseDelete#0" />
+                <element signature="e#5485#5552#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="180">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -107,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="26" />
               <folding>
                 <element signature="e#7#50#0#PHP" expanded="true" />
               </folding>
@@ -116,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/resources/views/Services.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="353" column="9" lean-forward="true" selection-start-line="353" selection-start-column="9" selection-end-line="353" selection-end-column="9" />
+            <state relative-caret-position="-758">
+              <caret line="262" column="33" lean-forward="true" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -154,10 +160,10 @@
         <option value="$PROJECT_DIR$/site/app/Models/CourseModel.php" />
         <option value="$PROJECT_DIR$/site/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/site/resources/views/Component/HomeCourse.blade.php" />
-        <option value="$PROJECT_DIR$/admin/resources/views/Services.blade.php" />
         <option value="$PROJECT_DIR$/admin/resources/views/Layout/menu.blade.php" />
-        <option value="$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php" />
         <option value="$PROJECT_DIR$/admin/routes/web.php" />
+        <option value="$PROJECT_DIR$/admin/resources/views/Services.blade.php" />
+        <option value="$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php" />
         <option value="$PROJECT_DIR$/admin/resources/views/Courses.blade.php" />
         <option value="$PROJECT_DIR$/admin/public/js/custom.js" />
       </list>
@@ -398,18 +404,19 @@
       <workItem from="1632626409122" duration="17307000" />
       <workItem from="1632806512186" duration="12447000" />
       <workItem from="1632888675358" duration="1695000" />
-      <workItem from="1632904619150" duration="7179000" />
+      <workItem from="1632904619150" duration="7220000" />
+      <workItem from="1632981286664" duration="11520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61089000" />
+    <option name="totallyTimeSpent" value="72650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -422,7 +429,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -603,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="59" column="4" lean-forward="true" selection-start-line="59" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -659,42 +657,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="e#7#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/Courses.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="133" column="18" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/CoursesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="180">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resources/views/Services.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="353" column="9" lean-forward="true" selection-start-line="353" selection-start-column="9" selection-end-line="353" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/resources/views/Courses.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/public/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
+        <state relative-caret-position="-1475">
+          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!block;n#CourseAdd#0" />
+            <element signature="e#3744#4168#0" />
+            <element signature="n#!!block;n#CourseDelete#0" />
+            <element signature="e#5485#5552#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/Services.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-758">
+          <caret line="262" column="33" lean-forward="true" selection-start-line="262" selection-start-column="33" selection-end-line="262" selection-end-column="33" />
         </state>
       </provider>
     </entry>

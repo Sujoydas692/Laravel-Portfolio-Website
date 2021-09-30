@@ -2,6 +2,7 @@
 @section('content')
 
 
+    {{--Course Main Div--}}
     <div id="mainDivCourse" class="container d-none">
         <div class="row">
             <div class="col-md-12 p-5">
@@ -31,6 +32,7 @@
         </div>
     </div>
 
+    {{--Course Loader Div--}}
     <div id="loaderDivCourse" class="container">
         <div class="row">
             <div class="col-md-12 text-center p-5">
@@ -40,6 +42,7 @@
         </div>
     </div>
 
+    {{--Course Wrong Div--}}
     <div id="WrongDivCourse" class="container d-none">
         <div class="row">
             <div class="col-md-12 text-center p-5">
@@ -50,7 +53,7 @@
         </div>
     </div>
 
-
+    {{--Add Course Modal--}}
     <div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -85,6 +88,69 @@
             </div>
         </div>
     </div>
+
+    {{--Delete Course Modal--}}
+    <div class="modal fade" id="deleteCourseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <h5 class="mt-4">Do you want to delete?</h5>
+                    <h5 id="CourseDeleteId" class="mt-4"></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">No</button>
+                    <button id="CourseDeleteConfirmBtn" type="button" class="btn btn-sm btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{--Edit Course Modal--}}
+    <div class="modal fade" id="editCourseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body  text-center">
+                    <h5 id="CourseEditId" class="mt-4"></h5>
+                    <div class="container">
+                        <div class="row">
+                            <div id="CourseEditForm1" class="col-md-6">
+                                <input id="CourseNameEditId" type="text" class="form-control mb-3" placeholder="Course Name">
+                                <input id="CourseDesEditId" type="text" class="form-control mb-3" placeholder="Course Description">
+                                <input id="CourseFeeEditId" type="text" class="form-control mb-3" placeholder="Course Fee">
+                                <input id="CourseEnrollEditId" type="text" class="form-control mb-3" placeholder="Total Enroll">
+                            </div>
+                            <div id="CourseEditForm2" class="col-md-6">
+                                <input id="CourseClassEditId" type="text" class="form-control mb-3" placeholder="Total Class">
+                                <input id="CourseLinkEditId" type="text" class="form-control mb-3" placeholder="Course Link">
+                                <input id="CourseImgEditId" type="text" class="form-control mb-3" placeholder="Course Image">
+                            </div>
+                        </div>
+                    </div>
+                    <img id="CourseEditLoader" class="w-75 m-5" src="{{asset('images/loader.gif')}}">
+                    <h1 id="CourseEditWrongIcon" class="d-none"><i class="far fa-frown"></i></h1>
+                    <h5 id="CourseEditWrong" class="d-none">Something Went Wrong!</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cancel</button>
+                    <button  id="CourseEditConfirmBtn" type="button" class="btn  btn-sm  btn-danger">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 @endsection
 
