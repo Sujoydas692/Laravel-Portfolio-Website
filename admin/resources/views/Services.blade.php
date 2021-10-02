@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12 p-5">
                 <button id="addNewBtnID" class="btn my-3 btn-sm btn-danger"><i class="fas fa-plus"></i>  Add New</button>
-                <table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <table id="ServiceDt" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
                         <th class="th-sm">Image</th>
@@ -62,8 +62,8 @@
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h5 class="mt-4">Do you want to delete?</h5>
-                    <h5 id="serviceDeleteId" class="mt-4"></h5>
+                    <h5 class="mt-3">Do you want to delete?</h5>
+                    <h5 id="serviceDeleteId" class="mt-4 d-none"></h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">No</button>
@@ -79,12 +79,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h5 class="modal-title">Update Service</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h5 id="serviceEditId" class="mt-4"></h5>
+                    <h5 id="serviceEditId" class="mt-4 d-none"></h5>
                     <div id="ServiceEditForm" class="d-none w-100">
                         <input type="text" id="ServiceNameID" class="form-control mb-4" placeholder="Service Name">
                         <input type="text" id="ServiceDesID" class="form-control mb-4" placeholder="Service Description">
@@ -147,6 +148,7 @@
                         $('#mainDiv').removeClass('d-none');
                         $('#loaderDiv').addClass('d-none');
 
+                        $('#ServiceDt').DataTable().destroy();
                         $('#service_table').empty();
 
                         var dataJSON = response.data;
@@ -178,6 +180,12 @@
                             $('#serviceEditId').html(id);
                             $('#editModal').modal('show');
                         })
+
+                        //Service Page Table
+                        $(document).ready(function() {
+                            $('#ServiceDt').DataTable({"order":false});
+                            $('.dataTables_length').addClass('bs-select');
+                        });
 
                     } else {
                         $('#loaderDiv').addClass('d-none');

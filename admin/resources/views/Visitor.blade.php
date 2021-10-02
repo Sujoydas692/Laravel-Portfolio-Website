@@ -58,12 +58,6 @@
 
                     if (response.status == 200) {
 
-                        //Visitor Page Table
-                        $(document).ready(function() {
-                            $('#VisitorDt').DataTable();
-                            $('.dataTables_length').addClass('bs-select');
-                        });
-
                         $('#mainDiv').removeClass('d-none');
                         $('#loaderDiv').addClass('d-none');
 
@@ -74,6 +68,12 @@
                                 "<td>" + dataJSON[i].ip_address + "</td>" +
                                 "<td>" + dataJSON[i].visiting_time + "</td>"
                             ).appendTo('#visitor_table');
+                        });
+
+                        //Visitor Page Table
+                        $(document).ready(function() {
+                            $('#VisitorDt').DataTable({"order":false});
+                            $('.dataTables_length').addClass('bs-select');
                         });
                     } else {
                         $('#loaderDiv').addClass('d-none');

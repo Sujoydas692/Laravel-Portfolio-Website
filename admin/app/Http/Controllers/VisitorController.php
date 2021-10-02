@@ -12,7 +12,7 @@ class VisitorController extends Controller
     }
 
     function getVisitorData(){
-        $result = json_encode(VisitorModel::all());
+        $result = json_encode(VisitorModel::orderBy('id','desc')->take(500)->get());
 
         return $result;
     }

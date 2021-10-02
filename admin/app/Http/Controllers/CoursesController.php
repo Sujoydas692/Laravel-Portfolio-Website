@@ -12,7 +12,7 @@ class CoursesController extends Controller
     }
 
     function getCoursesData(){
-        $result = json_encode(CourseModel::all());
+        $result = json_encode(CourseModel::orderBy('id','desc')->get());
 
         return $result;
     }
@@ -40,7 +40,6 @@ class CoursesController extends Controller
     }
 
     function courseUpdate(Request $request){
-
         $id = $request->input('id');
         $course_name = $request->input('course_name');
         $course_des = $request->input('course_des');
