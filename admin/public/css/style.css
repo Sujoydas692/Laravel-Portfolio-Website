@@ -5,4 +5,17 @@ padding: 1% 1% 1% 1% ;
 	width:60px;
 	height:auto;
 }
+.imagePreview{
+	border: none;
+	width: 100%;
+	object-fit: cover;
+	height: 320px;
+}
+
+.imageOnRow{
+	border: none !important;
+	width: 100%;
+	object-fit: cover;
+	height: 200px;
+}
 

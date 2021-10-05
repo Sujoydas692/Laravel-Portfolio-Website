@@ -60,4 +60,6 @@ Route::post('/onLogin', [LoginController::class, 'onLogin']);
 Route::get('/Logout', [LoginController::class, 'onLogout']);
 
 // Admin Panel Photo Gallery
-Route::get('/photo', [PhotoController::class, 'PhotoIndex']);
+Route::get('/photo', [PhotoController::class, 'PhotoIndex'])->middleware('LoginCheck');
+Route::post('/PhotoUpload', [PhotoController::class, 'PhotoUpload'])->middleware('LoginCheck');
+Route::get('/PhotoJSON', [PhotoController::class, 'PhotoJSON'])->middleware('LoginCheck');
