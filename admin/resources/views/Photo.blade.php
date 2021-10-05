@@ -13,8 +13,9 @@
 
     <div class="container-fluid">
         <div class="row PhotoRow">
-            
+
         </div>
+        <button id="LoadMoreBtn" class="btn btn-sm btn-primary">Load More</button>
     </div>
 
     {{--Modal--}}
@@ -56,7 +57,7 @@
 
         $('#SavePhoto').on('click',function () {
 
-            $('#SavePhoto').html("<div class='spinner-border spinner-border-sm' role='status'></div>")
+            $('#SavePhoto').html("<div class='spinner-border spinner-border-sm' role='status'></div>");
 
             var PhotoFile = $('#imageInput').prop('files')[0];
             var formData = new FormData();
@@ -68,24 +69,82 @@
                     $('#PhotoModal').modal('hide');
                     $('#SavePhoto').html('Save');
                     toastr.success('Photo Upload Successful!');
+
                 } else {
                     toastr.error('Photo Upload Fail!');
+                    window.location.href="/photo";
                 }
             }).catch(function (error) {
                 toastr.error('Photo Upload Fail!');
+                window.location.href="/photo";
             })
         })
 
         LoadPhoto();
         function LoadPhoto() {
-            axios.get('/PhotoJSON').then(function (response) {
+            let URL = "/PhotoJSON";
+            axios.get(URL).then(function (response) {
                 $.each(response.data, function(i, item) {
                     $("<div class='col-md-3 p-1'>").html(
-                        "<img class='imageOnRow' src="+item['location']+">"
+                        "<img data-id="+item['id']+" class='imageOnRow' src="+item['location']+">"+
+                        "<button data-id="+item['id']+" data-photo="+item['location']+" class='btn deletePhoto btn-sm'>Delete</button>"
                     ).appendTo('.PhotoRow');
+                    
+                    $('.deletePhoto').on('click',function (event) {
+                        let id = $(this).data('id');
+                        let photo = $(this).data('photo');
+                        PhotoDelete(photo,id);
+                        event.preventDefault();
+                    })
                 });
             }).catch(function (error) {
                 
+            })
+        }
+
+        var ImgID = 0;
+        function LoadByTD(FirstImgID,loadMoreBtn){
+            ImgID = ImgID+4;
+            let PhotoID = ImgID+FirstImgID;
+            let URL = "/PhotoJSONByID/"+PhotoID;
+            loadMoreBtn.html("<div class='spinner-border spinner-border-sm' role='status'></div>");
+            axios.get(URL).then(function (response) {
+                loadMoreBtn.html("Load More");
+                $.each(response.data, function(i, item) {
+                    $("<div class='col-md-3 p-1'>").html(
+                        "<img data-id="+item['id']+" class='imageOnRow' src="+item['location']+">"+
+                            "<button data-id="+item['id']+" data-photo="+item['location']+" class='btn btn-sm'>Delete</button>"
+                    ).appendTo('.PhotoRow');
+                });
+            }).catch(function (error) {
+
+            })
+        }
+
+        $('#LoadMoreBtn').on('click',function () {
+            let loadMoreBtn = $(this);
+            let FirstImgID = $(this).closest('div').find('img').data('id');
+            LoadByTD(FirstImgID,loadMoreBtn);
+        })
+
+        function PhotoDelete(OldPhotoURL,id) {
+            let URL = "/PhotoDelete";
+            let myFormData = new FormData();
+
+            myFormData.append('OldPhotoURL',OldPhotoURL);
+            myFormData.append('id',id);
+
+            axios.post(URL,myFormData).then(function (response) {
+                if (response.status==200 && response.data==1){
+                    toastr.success('photo Delete Successful!');
+                    $('.PhotoRow').empty();
+                    window.location.href="/photo";
+                }
+                else {
+                    toastr.error('photo Delete Fail!');
+                }
+            }).catch(function (error) {
+                toastr.error('photo Delete Fail!');
             })
         }
     </script>
