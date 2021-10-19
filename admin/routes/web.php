@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoginRegistraitonCOntroller;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ReviewController;
@@ -65,3 +66,11 @@ Route::post('/PhotoUpload', [PhotoController::class, 'PhotoUpload'])->middleware
 Route::get('/PhotoJSON', [PhotoController::class, 'PhotoJSON'])->middleware('LoginCheck');
 Route::get('/PhotoJSONByID/{id}', [PhotoController::class, 'PhotoJSONByID'])->middleware('LoginCheck');
 Route::post('/PhotoDelete', [PhotoController::class, 'PhotoDelete'])->middleware('LoginCheck');
+
+// Admin Panel Profile
+Route::get('/profile', [LoginRegistraitonCOntroller::class, 'LoginGithubIndex'])->middleware('LoginCheck');
+
+
+Route::get('/callGithub',[LoginRegistraitonCOntroller::class, 'callGithub']);
+Route::get('/GithubCallBack',[LoginRegistraitonCOntroller::class, 'GithubCallBack']);
+Route::get('/logout', [LoginRegistraitonCOntroller::class, 'onLogout']);

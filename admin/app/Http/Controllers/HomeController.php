@@ -20,13 +20,15 @@ class HomeController extends Controller
         $TotalService = ServicesModel::count();
         $TotalVisitor = VisitorModel::count();
 
-        return view('Home',[
-            'TotalContact'=>$TotalContact,
-            'TotalCourse'=>$TotalCourse,
-            'TotalProject'=>$TotalProject,
-            'TotalReview'=>$TotalReview,
-            'TotalService'=>$TotalService,
-            'TotalVisitor'=>$TotalVisitor
-        ]);
+            return view('Home', [
+                'TotalContact' => $TotalContact,
+                'TotalCourse' => $TotalCourse,
+                'TotalProject' => $TotalProject,
+                'TotalReview' => $TotalReview,
+                'TotalService' => $TotalService,
+                'TotalVisitor' => $TotalVisitor
+            ]);
+
     }
+
 }

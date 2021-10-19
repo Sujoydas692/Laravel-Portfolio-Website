@@ -20,7 +20,14 @@
                             <div class="form-group">
                                 <button name="submit" type="submit" class="btn btn-block btn-danger">Login</button>
                             </div>
+                            <div class="form-group">
+                                <a href="/callGithub" class="btn btn-primary text-white btn-block btn-social btn-microsoft"><span class="fab fa-github">
+                            </span> Sign In with Github
+                                </a>
+                            </div>
                         </form>
+
+
                     </div>
 
                     <div style="height: 450px" class="col-md-6 bg-light">

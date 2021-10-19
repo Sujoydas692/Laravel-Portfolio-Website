@@ -16,7 +16,7 @@ class LoginCheckMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->has('user')){
+        if ($request->session()->has('token')){
             return $next($request);
         }
         else{
